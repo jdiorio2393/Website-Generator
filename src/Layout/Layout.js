@@ -15,12 +15,15 @@ const Layout = () => {
   useEffect(() => {
     axios.get('http://localhost:3000/get-session').then((result) => {
       const sessionUser = result.data.user;
-      const user = {
-        id: sessionUser._id,
-        email: sessionUser.email,
-        name: sessionUser.name,
-      };
-      context.storeSession(user);
+      if (result.data.user) {
+        const user = {
+          id: sessionUser._id,
+          email: sessionUser.email,
+          name: sessionUser.name,
+        };
+        context.storeSession(user);
+      }
+      console.log(sessionUser);
     });
   }, []);
 

@@ -1,0 +1,75 @@
+.business-about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: 'about1 about2' 'about3 about4';
+  padding-top: 5%;
+  position: relative;
+}
+
+.about1 {
+  grid-area: about1;
+  justify-self: center;
+  margin-left: 5%;
+  box-shadow: 1px 0px 20px #0000004a;
+}
+
+.about2 {
+  grid-area: about2;
+}
+.about2 h1 {
+  font-size: 4rem;
+  font-family: 'brandon-grotesque', sans-serif;
+  font-weight: 700;
+}
+.about2 p {
+  width: 75%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'brandon-grotesque', sans-serif;
+  font-weight: 300;
+  color: #5f5f5f;
+  padding-top: 2%;
+}
+.about2 .btn {
+  font-size: 1.2rem;
+  padding: 1% 1.5% 1% 1.5%;
+  margin-top: 1%;
+}
+
+.about3 {
+  grid-area: about3;
+  display: inline-block;
+}
+.about3 h1 {
+  font-size: 4rem;
+  font-family: 'brandon-grotesque', sans-serif;
+  font-weight: 700;
+}
+.about3 p {
+  width: 75%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'brandon-grotesque', sans-serif;
+  font-weight: 300;
+  color: #5f5f5f;
+  padding-top: 2%;
+}
+.about3 .btn {
+  font-size: 1.2rem;
+  padding: 1% 1.5% 1% 1.5%;
+  margin-top: 1%;
+}
+.about3 .left-text {
+  display: inline-block;
+}
+
+.about4 {
+  grid-area: about4;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}

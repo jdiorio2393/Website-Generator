@@ -1,12 +1,14 @@
 import React from 'react';
-import BusinessPage from '../Industries/Business/businessHeader1';
+import BusinessHeader from '../Industries/Business/businessHeader1';
+import BusinessAbout from '../Industries/Business/BusinessAbout';
 
-const Businesspage = () => {
+const BusinessPage = () => {
   return (
     <>
-      <BusinessPage />
+      <BusinessHeader />
+      <BusinessAbout />
     </>
   );
 };
 
-export default Businesspage;
+export default BusinessPage;
