@@ -11,8 +11,9 @@
 .about1 {
   grid-area: about1;
   justify-self: center;
-  margin-left: 5%;
+  margin-left: 15%;
   box-shadow: 1px 0px 20px #0000004a;
+  border-radius: 5px;
 }
 
 .about2 {
@@ -41,6 +42,7 @@
 .about3 {
   grid-area: about3;
   display: inline-block;
+  padding-top: 10%;
 }
 .about3 h1 {
   font-size: 4rem;
@@ -48,7 +50,7 @@
   font-weight: 700;
 }
 .about3 p {
-  width: 75%;
+  width: 90%;
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: 'brandon-grotesque', sans-serif;
@@ -63,10 +65,14 @@
 }
 .about3 .left-text {
   display: inline-block;
+  margin-left: 23%;
 }
 
 .about4 {
   grid-area: about4;
+  margin-top: 10%;
+  box-shadow: 1px 0px 20px #0000004a;
+  border-radius: 5px;
 }
 
 .responsive-img {

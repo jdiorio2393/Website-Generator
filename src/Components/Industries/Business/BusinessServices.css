@@ -1,0 +1,47 @@
+.services-container {
+  margin-top: 10%;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.services-container h1 {
+  font-size: 4rem;
+  font-family: 'brandon-grotesque', sans-serif;
+  font-weight: 700;
+}
+
+.services-container p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'brandon-grotesque', sans-serif;
+  font-weight: 300;
+}
+
+i {
+  /* display: inline-block; */
+  display: block !important;
+  font-size: 1rem;
+  justify-self: center;
+  padding-bottom: 5%;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5% 5%;
+  grid-template-areas: '. . . .';
+  width: 80%;
+  margin: auto;
+  padding-top: 3%;
+}
+
+.icon-div {
+  transition: all 1s ease;
+}
+
+.icon-div:hover {
+  box-shadow: 1px 0px 15px #00000025;
+  padding: 15% 10% 5% 10%;
+  transition: all 1s ease;
+}

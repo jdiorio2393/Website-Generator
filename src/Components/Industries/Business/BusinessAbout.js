@@ -25,7 +25,7 @@ const BusinessAbout = () => {
       </div>
       <div className="about3">
         <div className="left-text">
-          <h1>Top Quality Service</h1>
+          <h1>Your Business Info</h1>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
             vero architecto excepturi asperiores tempore mollitia incidunt
@@ -39,6 +39,11 @@ const BusinessAbout = () => {
           <button className="btn btn-primary">Go Somewhere</button>
         </div>
       </div>
+      <img
+        src="/Industries/Business/business2.jpg"
+        alt=""
+        className="responsive-img about4"
+      />
     </div>
   );
 };
