@@ -39,3 +39,7 @@ a.nav-link {
 .navbar-brand {
   padding-left: 9%;
 }
+
+.hidden {
+  display: none !important;
+}

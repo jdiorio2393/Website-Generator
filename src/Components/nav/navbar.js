@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './navbar.css';
+import { GlobalContext } from '../Context/GlobalState';
 
-const navbar = () => {
+const Navigation = () => {
+  const context = useContext(GlobalContext);
+  let session = false;
+  if (context.session[0]) {
+    session = context.session[0].isLoggedIn;
+  }
+
   return (
     <Navbar expand="lg">
       <Navbar.Brand href="#home">Website Generator</Navbar.Brand>
@@ -10,8 +17,13 @@ const navbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="">
           <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/get-started">Sign Up</Nav.Link>
+          <Nav.Link className={session ? 'hidden' : ''} href="/login">
+            Login
+          </Nav.Link>
+          <Nav.Link className={session ? 'hidden' : ''} href="/get-started">
+            Sign Up
+          </Nav.Link>
+          {session ? <Nav.Link href="/">Logout</Nav.Link> : null}
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
@@ -33,4 +45,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navigation;

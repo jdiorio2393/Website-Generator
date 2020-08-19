@@ -7,7 +7,7 @@ const Survey = () => {
     <div className="survey-container">
       <div className="survey-div">
         <h1>Lets Make A Beautiful Website</h1>
-        <Form>
+        <Form action="">
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Your Business Name</Form.Label>

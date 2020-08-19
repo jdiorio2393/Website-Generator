@@ -20,10 +20,12 @@ const Layout = () => {
           id: sessionUser._id,
           email: sessionUser.email,
           name: sessionUser.name,
+          isLoggedIn: result.data.isLoggedin,
         };
         context.storeSession(user);
       }
-      console.log(sessionUser);
+      // console.log(sessionUser);
+      // console.log(result.data);
     });
   }, []);
 
