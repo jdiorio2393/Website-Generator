@@ -24,8 +24,8 @@ const Layout = () => {
         };
         context.storeSession(user);
       }
-      // console.log(sessionUser);
-      // console.log(result.data);
+      console.log(sessionUser);
+      console.log(result.data);
     });
   }, []);
 

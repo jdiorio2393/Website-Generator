@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Form, Button } from 'react-bootstrap';
 import './navbar.css';
 import { GlobalContext } from '../Context/GlobalState';
+import Axios from 'axios';
 
 const Navigation = () => {
   const context = useContext(GlobalContext);
@@ -23,7 +24,13 @@ const Navigation = () => {
           <Nav.Link className={session ? 'hidden' : ''} href="/get-started">
             Sign Up
           </Nav.Link>
-          {session ? <Nav.Link href="/">Logout</Nav.Link> : null}
+          {session ? (
+            <Form action="/logout" method="POST">
+              <Button type="submit" className="logout">
+                Logout
+              </Button>
+            </Form>
+          ) : null}
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
