@@ -5,6 +5,11 @@ export default (state, action) => {
         ...state,
         session: [action.payload, ...state.session],
       };
+    case 'STORE_SURVEY':
+      return {
+        ...state,
+        survey: [action.payload, ...state.survey],
+      };
     default:
       return state;
   }

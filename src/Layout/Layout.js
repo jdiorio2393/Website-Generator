@@ -7,6 +7,7 @@ import SignUp from '../Components/SignUp/SignUp';
 import Login from '../Components/Login/Login';
 import BusinessPage from '../Components/BusinessPage/BusinessPage';
 import axios from 'axios';
+import GeneratedWebsite from '../Components/UserWebsite/UserWebsite';
 import { GlobalContext } from '../Components/Context/GlobalState';
 
 const Layout = () => {
@@ -34,12 +35,17 @@ const Layout = () => {
       <Nav />
       <Switch>
         <Route exact path="/" render={Hero1} />
-        <Route exact path="/survey" render={Survey} />
+        <Route exact path="/survey" component={Survey} />
         <Route exact path="/get-started" render={SignUp} />
         <Route exact path="/login" render={Login} />
         <div className="page-background">
           <Route exact path="/test" render={BusinessPage} />
         </div>
+        <Route
+          path="/website/:id"
+          // render={(props) => <GeneratedWebsite {...props} />}
+          component={GeneratedWebsite}
+        />
       </Switch>
     </Router>
   );

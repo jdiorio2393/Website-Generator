@@ -3,6 +3,7 @@ import AppReducer from './AppReducer';
 
 const initialState = {
   session: [],
+  survey: [],
 };
 
 //create context
@@ -20,8 +21,17 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function storeSurvey(survey) {
+    dispatch({
+      type: 'STORE_SURVEY',
+      payload: survey,
+    });
+  }
+
   return (
-    <GlobalContext.Provider value={{ session: state.session, storeSession }}>
+    <GlobalContext.Provider
+      value={{ session: state.session, storeSession, storeSurvey }}
+    >
       {children}
     </GlobalContext.Provider>
   );

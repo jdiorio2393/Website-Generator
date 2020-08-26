@@ -14,3 +14,14 @@
 .survey-div h1 {
   padding-bottom: 5%;
 }
+
+.surveybtn {
+  padding: 2% 3%;
+  background-color: #004c98;
+  color: white;
+  border-radius: 5px;
+}
+
+.surveybtn:hover {
+  color: white;
+}

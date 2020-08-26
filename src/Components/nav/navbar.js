@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Navbar, Nav, NavDropdown, Form, Button } from 'react-bootstrap';
 import './navbar.css';
 import { GlobalContext } from '../Context/GlobalState';
-import Axios from 'axios';
 
 const Navigation = () => {
   const context = useContext(GlobalContext);
